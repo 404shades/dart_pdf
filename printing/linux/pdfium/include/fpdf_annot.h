@@ -546,8 +546,7 @@ FPDF_EXPORT FPDF_BOOL FPDF_CALLCONV FPDFAnnot_SetFlags(FPDF_ANNOTATION annot,
 //
 // Returns the annotation flags specific to interactive forms.
 FPDF_EXPORT int FPDF_CALLCONV
-FPDFAnnot_GetFormFieldFlags(FPDF_FORMHANDLE handle,
-                            FPDF_ANNOTATION annot);
+FPDFAnnot_GetFormFieldFlags(FPDF_FORMHANDLE handle, FPDF_ANNOTATION annot);
 
 // Experimental API.
 // Retrieves an interactive form annotation whose rectangle contains a given

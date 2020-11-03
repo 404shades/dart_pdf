@@ -46,9 +46,8 @@ typedef struct _FX_FILEAVAIL {
   //
   // Returns true if the specified data section at |offset| of |size|
   // is available.
-  FPDF_BOOL (*IsDataAvail)(struct _FX_FILEAVAIL* pThis,
-                           size_t offset,
-                           size_t size);
+  FPDF_BOOL (*IsDataAvail)
+  (struct _FX_FILEAVAIL* pThis, size_t offset, size_t size);
 } FX_FILEAVAIL;
 typedef void* FPDF_AVAIL;
 
