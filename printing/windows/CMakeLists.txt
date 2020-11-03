@@ -16,11 +16,20 @@ cmake_minimum_required(VERSION 3.15)
 set(PROJECT_NAME "printing")
 project(${PROJECT_NAME} LANGUAGES CXX)
 
+# Download pdfium
+include(../windows/DownloadProject.cmake)
+download_project(
+  PROJ
+  pdfium
+  URL
+  https://github.com/bblanchon/pdfium-binaries/releases/latest/download/pdfium-windows-x64.zip
+  )
+
 # This value is used when generating builds using this plugin, so it must not be
 # changed
 set(PLUGIN_NAME "printing_plugin")
 
-include(../pdfium/PDFiumConfig.cmake)
+include(${pdfium_SOURCE_DIR}/PDFiumConfig.cmake)
 
 add_library(${PLUGIN_NAME} SHARED
             "printing.cpp"
