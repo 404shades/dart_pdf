@@ -4,8 +4,6 @@
 #include <gtk/gtk.h>
 #include <sys/utsname.h>
 
-#include <cstring>
-
 #define PRINTING_PLUGIN(obj) \
   (G_TYPE_CHECK_INSTANCE_CAST((obj), printing_plugin_get_type(), \
                               PrintingPlugin))
